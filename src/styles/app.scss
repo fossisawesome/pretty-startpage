@@ -1,0 +1,81 @@
+@use 'variables';
+@use 'mixins';
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+// Shared form/button classes used across widget settings forms
+// (Clock/Search/Weather/BookmarksSettings, SettingsSidebar, ThemeModal).
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.form-row-check { flex-direction: row; align-items: center; }
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--subtext);
+}
+.check-label input[type='checkbox'] { accent-color: var(--accent); width: 14px; height: 14px; }
+
+label {
+  font-size: 13px;
+  color: var(--subtext);
+  font-weight: 500;
+}
+input[type='text'],
+select {
+  padding: 9px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+}
+input[type='text']:focus,
+select:focus { border-color: var(--accent); }
+small { font-size: 12px; color: var(--subtext); }
+
+.btn-primary {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-ghost {
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+.btn-ghost:hover { background: var(--border); }
