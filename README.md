@@ -12,7 +12,7 @@ Based on the <a href="https://github.com/catppuccin/catppuccin/tree/main/">Catpp
 ## Demo
 
 Check out the demo! :)
-> https://fossisawesome.github.io/pretty-startpage/web/
+> https://fossisawesome.github.io/pretty-startpage/
 
 ---
 
@@ -22,18 +22,21 @@ Check out the demo! :)
 
 ---
 
-## Usage
+## Widgets
 
-> [!WARNING]
-> Make sure your link has `web/` at the end! Example: `https://yourgithubusername.github.io/yourforksname/web/`
+Clock, Search, Weather, Bookmarks, Notes, and Quote — add and arrange them
+in edit mode, configure each from its own settings sidebar.
+
+## Usage
 
 **Fork this repo.**
 
 **Enable GitHub Pages:**
 1. Go to your fork's settings tab.
 2. Click Pages in the left sidebar.
-3. Select the `main` branch as your source and click save.
-4. Save your GitHub Pages URL somewhere.
+3. Select **GitHub Actions** as the source (not "Deploy from a branch") and save.
+4. Push to `main` — the included workflow builds and deploys automatically.
+5. Save your GitHub Pages URL somewhere.
 
 ---
 
@@ -79,6 +82,18 @@ Check out the demo! :)
 You can adjust basic settings directly within the UI.
 
 > **Tip:** You can customize it more by editing the files directly, but I will try to make the settings more advanced later.
+
+---
+
+## Developing locally
+
+Requires [pnpm](https://pnpm.io).
+
+```bash
+pnpm install
+pnpm dev     # local dev server
+pnpm build   # production build to dist/
+```
 
 ---
 
